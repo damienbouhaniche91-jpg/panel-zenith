@@ -37,9 +37,12 @@
             left: 15px;
         }
 
+        .button app
+
         .cache {
             display: none !important;
         }
+
 
         h2 {
             color: var(--title-color);
@@ -132,6 +135,10 @@
             }
         }
 
+        function OuvrirMinecraft(){
+            window.open("https://eymenwsmc.site/", "_blank");
+        }
+
         function Valider(){
             let pseudo = document.getElementById("pseudo").value
             let mdp = document.getElementById("mdp").value
@@ -157,6 +164,9 @@
         <button class="valider" type="submit" onclick="Valider()">Valider</button>
     </div>
     </div>
-    <button type="button" class="sombre" id="sombre" onclick="sombre()">mode nuit 🌙</button>
+    <div id="zone-menu">
+        <button type="button" class="sombre" id="sombre" onclick="sombre()">mode nuit 🌙</button>
+        <button type="button" class="interface-button" onclick="OuvrirMinecraft()">Minecraft</button>
+    </div>
 </body>
 </html>

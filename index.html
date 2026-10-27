@@ -129,9 +129,14 @@
             background-position: center;
             color: white;
             border-color: #025385;
-            font-size: 18px;
+            font-size: 30px;
             padding: 50px 150px;
             margin: 25px;
+        }
+        @media (orientation: portrait) {
+            .interface-part{
+                flex-direction: column;
+            }
         }
         button:hover {
             background-color: var(--button-hover);

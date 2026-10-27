@@ -113,7 +113,16 @@
         #YouTube {
             background-color: #FF0033;
             color: white;
-            border-color: #3b5720;
+            border-color: #700117;
+            font-size: 18px;
+            padding: 50px 150px;
+            margin: 25px;
+        }
+
+        #Poki {
+            background-color: #009CFF;
+            color: white;
+            border-color: #025385;
             font-size: 18px;
             padding: 50px 150px;
             margin: 25px;
@@ -167,6 +176,10 @@
             window.open("https://youtube.com", "_blank");
         }
 
+        function OuvrirPoki(){
+            window.open("https://poki.com", "_blank");
+        }
+
         function Valider(){
             let pseudo = document.getElementById("pseudo").value
             let mdp = document.getElementById("mdp").value
@@ -195,6 +208,7 @@
     <div id="zone-menu" class="cache">
         <button type="button" class="interface-part" id="minecraft" onclick="OuvrirMinecraft()">Minecraft</button>
         <button type="button" class="interface-part" id="YouTube" onclick="OuvrirYouTube()">YouTube</button>
+        <button type="button" class="interface-part" id="Poki" onclick="OuvrirPoki()">Poki</button>
     </div>
     <button type="button" class="sombre" id="sombre" onclick="sombre()">mode nuit 🌙</button>
 </body>

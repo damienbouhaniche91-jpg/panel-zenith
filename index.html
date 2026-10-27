@@ -37,6 +37,8 @@
             left: 15px;
         }
 
+        .button app
+
         .cache {
             display: none !important;
         }
@@ -60,6 +62,10 @@
 
         input::placeholder {
             color: var(--text-color);
+        }
+
+        #minecraft{
+            <img src="minecraft.png" alt="Minecraft" width="20">
         }
 
         input:focus {
@@ -159,12 +165,12 @@
             <input type="password" id="mdp" placeholder="Entrez votre mot de passe">
             <button type="button" onclick="ChangerType()">👀</button>
         </div>
-        <button class="valider" type="button" onclick="Valider()">Valider</button>
+        <button class="valider" type="submit" onclick="Valider()">Valider</button>
     </div>
     </div>
     <div id="zone-menu" class="cache">
-        <button type="button" class="sombre" id="sombre" onclick="sombre()">mode nuit 🌙</button>
         <button type="button" class="interface-part" id="minecraft" onclick="OuvrirMinecraft()">Minecraft</button>
     </div>
+    <button type="button" class="sombre" id="sombre" onclick="sombre()">mode nuit 🌙</button>
 </body>
 </html>

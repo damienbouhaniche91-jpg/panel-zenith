@@ -11,6 +11,227 @@
             margin: 0;
         }
         .maBoite{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            flex: 1 1 200px;
+            max-width: 150px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: var(--bg-color);
+            border-color: var(--bg-border);
+            border-radius: 15px;
+            padding: 15px;
+            border: 2px solid var(--bg-border);
+        }
+
+        .ligne-mdp {
+            display: flex;
+            gap: 8px; /* Un petit espace entre l'input et l'œil */
+        }
+
+        .ligne-mdp input {
+            flex: 1; /* L'input prend toute la place disponible sur la ligne */
+        }
+
+        h1 {
+            color: var(--title-color);
+            text-align: left;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+        }
+
+        .cache {
+            display: none !important;
+            background-color: #5b8731;
+        }
+
+
+        h2 {
+            color: var(--title-color);
+            text-align: center;
+            margin: 0 0 10px 0;
+        }
+
+        input {
+            border: 3px solid var(--input-border);
+            background-color: var(--input-bg);
+            border-radius: 15px;
+            padding: 10px 15px;
+            font-size: 15px;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        input::placeholder {
+            color: var(--text-color);
+        }
+
+        input:focus {
+            border-color: var(--input-border);
+        }
+
+        .ligne-mdp {
+            display: flex;
+            gap: 8px;
+        }
+
+        .ligne-mdp input {
+            flex: 1;
+        }
+
+        .sombre{
+            position:fixed;
+            top: 15px;
+            right: 15px;
+        }
+
+        button {
+            background-color: var(--input-bg);
+            border: 3px solid var(--input-border);
+            border-radius: 10px;
+            padding: 10px 15px;
+            font-size: 15px;
+            cursor: pointer;
+            color: var(--text-color);
+            font-weight: bold;
+        }
+        #zone-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+        }
+        #minecraft {
+            background-image: url('grass_block_side.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            image-rendering: pixelated;
+            color: black;
+            border-color: #3b5720;
+            font-size: 30px;
+            padding: 50px 150px;
+            margin: 25px;
+        }
+        #YouTube {
+            background-image: url('youtube_logo.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: black;
+            border-color: #700117;
+            font-size: 30px;
+            padding: 50px 150px;
+            margin: 25px;
+        }
+        #Poki {
+            background-image: url('poki_logo.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+            border-color: #025385;
+            font-size: 30px;
+            padding: 50px 150px;
+            margin: 25px;
+        }
+
+        button:hover {
+            background-color: var(--button-hover);
+        }
+        body.dark {
+            --bg-color: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-color: rgb(255, 255, 255);
+            --input-bg: #3a3a3a;
+            --input-border: gray;
+            --fond-page: rgb(49, 49, 49);
+            --button-color: rgb(49, 49, 49);
+            --button-hover: rgb(168, 165, 165);
+            --title-color: white;
+        }
+        :root {
+            --fond-page: bisque;
+            --text-color: black;
+            --bg-color: white;
+            --card-bg: rgb(255, 255, 255);
+            --button-color: rgb(49, 49, 49);
+            --input-bg: rgb(255, 255, 255);
+            --input-border: orange;
+            --button-hover: bisque;
+            --title-color: orange;
+        }
+    </style>
+    <script>
+        function sombre(){
+            document.body.classList.toggle("dark")
+        }
+        function ChangerType(){
+            let champ = document.getElementById("mdp")
+            if (champ.type === "password"){
+                champ.type = "text"
+            } else {
+                champ.type = "password"
+            }
+        }
+        function OuvrirMinecraft(){
+            window.open("https://eymenwsmc.site/", "_blank");
+        }
+        function OuvrirYouTube(){
+            window.open("https://youtube.com", "_blank");
+        }
+        function OuvrirPoki(){
+            window.open("https://poki.com", "_blank");
+        }
+        function Valider(){
+            let pseudo = document.getElementById("pseudo").value
+            let mdp = document.getElementById("mdp").value
+            if (pseudo === "zenith_III" && mdp === "Clmcdm!10"){
+                document.getElementById("zone-connection").classList.add("cache");
+                document.getElementById("zone-menu").classList.remove("cache");
+            } else {
+                alert("Identifiants incorrects !")
+            }
+        }    
+    </script>
+</head>
+<body>
+    <div id="zone-connection">
+    <h1>Bienvenue !</h1>
+    <div class="maBoite">
+    <h2>Connection :</h2>
+        <input type="text" id="pseudo" placeholder="Entrez votre pseudo">
+        <div class="ligne-mdp">
+            <input type="password" id="mdp" placeholder="Entrez votre mot de passe">
+            <button type="button" onclick="ChangerType()">👀</button>
+        </div>
+        <button class="valider" type="button" onclick="Valider()">Valider</button>
+    </div>
+    </div>
+    <div id="zone-menu" class="cache">
+        <button type="button" class="interface-part" id="minecraft" onclick="OuvrirMinecraft()">Minecraft</button>
+        <button type="button" class="interface-part" id="YouTube" onclick="OuvrirYouTube()">YouTube</button>
+        <button type="button" class="interface-part" id="Poki" onclick="OuvrirPoki()">Poki</button>
+    </div>
+    <button type="button" class="sombre" id="sombre" onclick="sombre()">mode nuit 🌙</button>
+</body>
+</html><html>
+<head>
+    <style>
+        body {
+            background-color: var(--fond-page);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .maBoite{
             display: flex;
             flex-direction: column;
             gap: 10px;

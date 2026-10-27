@@ -205,6 +205,11 @@
         function OuvrirPoki(){
             window.open("https://poki.com", "_blank");
         }
+        function NewButton() {
+            let btn=document.createElement("button");
+            btn.innerText = "Mon bouton"
+            document.getElementById("zone-menu").appendChild(btn);
+        }
         function Valider(){
             let pseudo = document.getElementById("pseudo").value
             let mdp = document.getElementById("mdp").value
@@ -234,6 +239,8 @@
         <button type="button" class="interface-part" id="minecraft" onclick="OuvrirMinecraft()">Minecraft</button>
         <button type="button" class="interface-part" id="YouTube" onclick="OuvrirYouTube()">YouTube</button>
         <button type="button" class="interface-part" id="Poki" onclick="OuvrirPoki()"></button>
+        <button type="button" class="interface-part" id="NewButton" onclick="NewButton"
+
     </div>
     <button type="button" class="sombre" id="sombre" onclick="sombre()">mode nuit 🌙</button>
 </body>

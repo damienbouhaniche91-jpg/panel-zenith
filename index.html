@@ -51,13 +51,24 @@
         }
 
         input {
-            border: 3px solid var(--input-border);
-            background-color: var(--input-bg);
-            border-radius: 15px;
-            padding: 10px 15px;
-            font-size: 15px;
-            outline: none;
-            box-sizing: border-box;
+            @media (orientation: landscape) {
+                border: 3px solid var(--input-border);
+                background-color: var(--input-bg);
+                border-radius: 15px;
+                padding: 10px 15px;
+                font-size: 15px;
+                outline: none;
+                box-sizing: border-box;
+            }
+            @media (orientation: portrait) {
+                border: 3px solid var(--input-border);
+                background-color: var(--input-bg);
+                border-radius: 15px;
+                padding: 15px 10px;
+                font-size: 15px;
+                outline: none;
+                box-sizing: border-box;
+            }
         }
 
         input::placeholder {

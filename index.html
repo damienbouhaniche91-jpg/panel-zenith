@@ -20,6 +20,7 @@
             padding: 15px;
             border: 2px solid var(--bg-border);
         }
+
         .ligne-mdp {
             display: flex;
             gap: 8px; /* Un petit espace entre l'input et l'œil */
@@ -37,10 +38,9 @@
             left: 15px;
         }
 
-        .button app
-
         .cache {
             display: none !important;
+            background-color: #5b8731;
         }
 
 
@@ -65,7 +65,7 @@
         }
 
         input:focus {
-            border-color: rgb(255, 94, 0);
+            border-color: var(--input-border);
         }
 
         .ligne-mdp {
@@ -94,6 +94,19 @@
             font-weight: bold;
         }
         
+        #zone-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #minecraft {
+            background-color: #5b8731;
+            color: white;
+            border-color: #3b5720;
+            font-size: 18px;
+            padding: 15px 30px;
+        }
 
         button:hover {
             background-color: var(--button-hover);
@@ -139,6 +152,10 @@
             window.open("https://eymenwsmc.site/", "_blank");
         }
 
+        function OuvrirMinecraft(){
+            window.open("https://youtube.com", "_blank");
+        }
+
         function Valider(){
             let pseudo = document.getElementById("pseudo").value
             let mdp = document.getElementById("mdp").value
@@ -166,6 +183,7 @@
     </div>
     <div id="zone-menu" class="cache">
         <button type="button" class="interface-part" id="minecraft" onclick="OuvrirMinecraft()">Minecraft</button>
+        <button type="button" class="interface-part" id="YouTube" onclick="OuvrirYouTube()">YouTube</button>
     </div>
     <button type="button" class="sombre" id="sombre" onclick="sombre()">mode nuit 🌙</button>
 </body>

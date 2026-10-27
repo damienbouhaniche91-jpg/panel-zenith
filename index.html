@@ -133,11 +133,13 @@
             padding: 50px 150px;
             margin: 25px;
         }
-        @media (orientation: portrait) {
-            .interface-part{
-                flex-direction: column;
-            }
+        .interface-part{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
+
         button:hover {
             background-color: var(--button-hover);
         }

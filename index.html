@@ -51,24 +51,13 @@
         }
 
         input {
-            @media (orientation: landscape) {
-                border: 3px solid var(--input-border);
-                background-color: var(--input-bg);
-                border-radius: 15px;
-                padding: 10px 15px;
-                font-size: 15px;
-                outline: none;
-                box-sizing: border-box;
-            }
-            @media (orientation: portrait) {
-                border: 3px solid var(--input-border);
-                background-color: var(--input-bg);
-                border-radius: 15px;
-                padding: 15px 10px;
-                font-size: 15px;
-                outline: none;
-                box-sizing: border-box;
-            }
+            border: 3px solid var(--input-border);
+            background-color: var(--input-bg);
+            border-radius: 15px;
+            padding: 10px 15px;
+            font-size: 15px;
+            outline: none;
+            box-sizing: border-box;
         }
 
         input::placeholder {
@@ -104,23 +93,20 @@
             color: var(--text-color);
             font-weight: bold;
         }
-        
         #zone-menu {
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 50px;
         }
-
         #minecraft {
-            background-color: #5b8731;
+            background-image: url('grass_block_side.png');
             color: white;
             border-color: #3b5720;
             font-size: 18px;
             padding: 50px 150px;
             margin: 25px;
         }
-
         #YouTube {
             background-color: #FF0033;
             color: white;
@@ -129,7 +115,6 @@
             padding: 50px 150px;
             margin: 25px;
         }
-
         #Poki {
             background-color: #009CFF;
             color: white;
@@ -138,11 +123,9 @@
             padding: 50px 150px;
             margin: 25px;
         }
-
         button:hover {
             background-color: var(--button-hover);
         }
-        
         body.dark {
             --bg-color: #1a1a1a;
             --card-bg: #2d2d2d;
@@ -178,19 +161,15 @@
                 champ.type = "password"
             }
         }
-
         function OuvrirMinecraft(){
             window.open("https://eymenwsmc.site/", "_blank");
         }
-
         function OuvrirYouTube(){
             window.open("https://youtube.com", "_blank");
         }
-
         function OuvrirPoki(){
             window.open("https://poki.com", "_blank");
         }
-
         function Valider(){
             let pseudo = document.getElementById("pseudo").value
             let mdp = document.getElementById("mdp").value

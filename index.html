@@ -184,6 +184,7 @@
         function sombre(){
             document.body.classList.toggle("dark")
         }
+        
         function ChangerType(){
             let champ = document.getElementById("mdp")
             if (champ.type === "password"){
@@ -192,22 +193,24 @@
                 champ.type = "password"
             }
         }
+
         function OuvrirMinecraft(){
             window.open("https://eymenwsmc.site/", "_blank");
         }
-        function OuvrirYouTube(){
-            window.open("https://youtube.com", "_blank");
-        }
-        function OuvrirPoki(){
-            window.open("https://poki.com", "_blank");
-        }
+
         function NewButton() {
             document.getElementById("zone-menu").appendChild(btn);
             document.getElementById("config_button").classList.add("cache");
+
+        }
+
+        function valider_site{
             let btn=document.createElement("button");
             let nom_site = document.getElementById("nom_site").value;
+            let site = document.getElementById("site").value;
             btn.innerText = nom_site
         }
+
         function Valider(){
             let pseudo = document.getElementById("pseudo").value
             let mdp = document.getElementById("mdp").value
@@ -244,6 +247,7 @@
     <div id="config_button" class="cache">
         <input type="text" id="site" placeholder="https://exemple.com">
         <input type="text" id="nom_site" placeholder="nom du site">
+        <button type="button" id="Valider_site" onclick="valider_site()">Valider</button>
     </div>
 </body>
 </html>

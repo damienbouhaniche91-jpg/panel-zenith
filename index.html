@@ -203,7 +203,7 @@
         }
         function NewButton() {
             let btn=document.createElement("button");
-            let nom_site = document.getElementById("nom_site");
+            let nom_site = document.getElementById("nom_site").value;
             btn.innerText = "Mon bouton"
             document.getElementById("zone-menu").appendChild(btn);
             document.getElementById("zone-menu").classList.remove("cache");
@@ -246,4 +246,4 @@
         <input type="text" id="nom_site" placeholder="nom du site">
     </div>
 </body>
-</html>
+</html>s

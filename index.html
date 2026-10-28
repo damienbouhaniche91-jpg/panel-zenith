@@ -202,11 +202,11 @@
             window.open("https://poki.com", "_blank");
         }
         function NewButton() {
+            document.getElementById("zone-menu").appendChild(btn);
+            document.getElementById("config_button").classList.add("cache");
             let btn=document.createElement("button");
             let nom_site = document.getElementById("nom_site").value;
             btn.innerText = nom_site
-            document.getElementById("zone-menu").appendChild(btn);
-            document.getElementById("config_button").classList.add("cache");
         }
         function Valider(){
             let pseudo = document.getElementById("pseudo").value

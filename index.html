@@ -206,7 +206,7 @@
             let nom_site = document.getElementById("nom_site").value;
             btn.innerText = nom_site
             document.getElementById("zone-menu").appendChild(btn);
-            document.getElementById("zone-menu").classList.remove("cache");
+            document.getElementById("config_button").classList.add("cache");
         }
         function Valider(){
             let pseudo = document.getElementById("pseudo").value
@@ -241,7 +241,7 @@
 
     </div>
     <button type="button" class="sombre" id="sombre" onclick="sombre()">mode nuit 🌙</button>
-    <div id="config_button">
+    <div id="config_button" class="cache">
         <input type="text" id="site" placeholder="https://exemple.com">
         <input type="text" id="nom_site" placeholder="nom du site">
     </div>

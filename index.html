@@ -204,12 +204,9 @@
             }
         }
 
-        function OuvrirMinecraft(){
-            window.open("https://eymenwsmc.site/", "_blank");
-        }
-
         function NewButton() {
             document.getElementById("config_button").classList.remove("cache");
+            document.getElementById("NewButton").classList.remove("cache");
         }
 
         function valider_site(){
@@ -223,6 +220,7 @@
             };
             document.getElementById("zone-menu").appendChild(btn);
             document.getElementById("config_button").classList.add("cache");
+            document.getElementById("NewButton").classList.add("cache");
         }
 
         function Valider(){

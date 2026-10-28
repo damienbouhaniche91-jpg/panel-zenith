@@ -40,7 +40,6 @@
 
         .cache {
             display: none !important;
-            background-color: #5b8731;
         }
 
 
@@ -204,8 +203,10 @@
         }
         function NewButton() {
             let btn=document.createElement("button");
+            let nom_site = document.getElementById("nom_site");
             btn.innerText = "Mon bouton"
             document.getElementById("zone-menu").appendChild(btn);
+            document.getElementById("zone-menu").classList.remove("cache");
         }
         function Valider(){
             let pseudo = document.getElementById("pseudo").value
@@ -240,5 +241,9 @@
 
     </div>
     <button type="button" class="sombre" id="sombre" onclick="sombre()">mode nuit 🌙</button>
+    <div id="config_button">
+        <input type="text" id="site" placeholder="https://exemple.com">
+        <input type="text" id="nom_site" placeholder="nom du site">
+    </div>
 </body>
 </html>
